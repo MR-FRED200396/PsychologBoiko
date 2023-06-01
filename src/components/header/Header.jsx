@@ -7,6 +7,10 @@ export default function Header(props) {
       <Link to={item.link}>{item.category}</Link>
     </li>
   ));
+  function pgUp() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <>
       <div className={style.header_wraper}>
@@ -16,7 +20,7 @@ export default function Header(props) {
           </nav>
         </div>
 
-        <div className={style.img_name}>
+        <div className={style.img_name} onClick={pgUp}>
           <img src="logo.jpg" alt="logo" />
           <h1>Psycholog Boiko</h1>
           <h3>psycholog success people</h3>
