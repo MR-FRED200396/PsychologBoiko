@@ -1,7 +1,11 @@
+import style from "./main.module.css";
+
 export default function Main() {
   return (
     <>
-      <div>Main</div>
+      <div className={style.qqq}>Main</div>
+
+      <p>qwerty</p>
     </>
   );
 }

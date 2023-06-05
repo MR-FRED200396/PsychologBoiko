@@ -1,34 +1,31 @@
-h1,
-h3 {
+.header_h1,
+.header_h3 {
   margin: 0;
   position: relative;
   right: -120%;
 }
-/* h3 {
-  margin-top: 0;
-} */
-ul {
+.header_ul {
   margin-right: 100px;
   padding-left: 0;
 }
-li {
+.header_li {
   list-style: none;
   text-decoration: none;
   display: inline-block;
   margin-left: 50px;
 }
-li:hover {
+.header_li:hover {
   background-color: #ff3399;
 }
-a {
+.header_a {
   text-decoration: none;
   color: #c53bba;
   font-size: 20px;
 }
-a:hover {
+.header_a:hover {
   color: antiquewhite;
 }
-img {
+.header_img {
   display: flex;
   position: absolute;
   bottom: -63px;
@@ -45,13 +42,12 @@ img {
   min-height: 200px;
   position: sticky;
   top: 2px;
-
   background: #ffcccc;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
 }
 
-.routing {
+.header_routing {
   display: flex;
   position: absolute;
   flex-direction: row;
@@ -66,66 +62,67 @@ img {
 }
 .active {
   background-color: #ff3399;
+  text-decoration: underline rgb(255, 255, 255);
 }
 @media (max-width: 1200px) {
-  ul {
+  .header_ul {
     margin-right: 50px;
   }
-  li {
+  .header_li {
     margin-left: 10px;
   }
 }
 @media (max-width: 1000px) {
-  ul {
+  .header_ul {
     margin-right: 5px;
   }
-  li {
+  .header_li {
     margin-left: 5px;
   }
-  h1 {
+  .header_h1 {
     font-size: 25px;
   }
-  h3 {
+  .header_h3 {
     font-size: 15px;
   }
-  img {
+  .header_img {
     bottom: -90%;
   }
 }
 @media (max-width: 800px) {
-  li {
+  .header_li {
     display: block;
     margin-top: 5px;
   }
 }
 @media (max-width: 650px) {
-  img {
+  .header_img {
     bottom: -50px;
     left: 20px;
     width: 45%;
   }
-  h1,
-  h3 {
+  .header_h1,
+  .header_h3 {
     right: 10%;
     top: -50px;
   }
 }
 @media (max-width: 420px) {
-  li {
+  .header_li {
     display: block;
     margin-top: 5px;
   }
-  a {
+  .header_a {
     font-size: 15px;
   }
   .img_name {
     left: 20px;
   }
-  .routing {
+  .header_routing {
     right: 20px;
   }
-  h1,
-  h3 {
+  .header_h1,
+  .header_h3 {
     right: 0%;
   }
 }
