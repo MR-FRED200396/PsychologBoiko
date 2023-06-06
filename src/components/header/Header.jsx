@@ -24,8 +24,8 @@ export default function Header(props) {
 
         <div className={style.img_name} onClick={pgUp}>
           <img className={style.header_img} src="logo.jpg" alt="logo" />
-          <h1 className={style.header_h1}>Psycholog Boiko</h1>
-          <h3 className={style.header_h3}>psycholog success people</h3>
+          <h1 className={style.header_h1}>Ірина Бойко</h1>
+          <h3 className={style.header_h3}>Психолог успішних людей</h3>
         </div>
       </div>
     </>
