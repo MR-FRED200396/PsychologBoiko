@@ -1,4 +1,10 @@
 import style from "./footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faFacebook,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -12,6 +18,11 @@ export default function Footer() {
           repudiandae fugiat consequatur!
         </p>
       </div>
+      <h1>
+        <FontAwesomeIcon icon={faFacebook} />
+        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faTelegram} />
+      </h1>
     </>
   );
 }
