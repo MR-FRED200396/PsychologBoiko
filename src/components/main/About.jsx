@@ -1,4 +1,5 @@
 import style from "./main.module.css";
+import SliderAbout from "./sliderAbout/SliderAbout";
 
 export default function About() {
   return (
@@ -70,22 +71,7 @@ export default function About() {
           </p>
 
           <h3 className={style.about_h3}>Диплом і сертифікати</h3>
-          <img className={style.dyplom} src="dyplom.jpeg" alt="dyplom_img" />
-          <img
-            className={style.dyplom}
-            src="certificate_of_participation.jpeg"
-            alt="certificate_of_participation.jpeg"
-          />
-          <img
-            className={style.dyplom}
-            src="certificate_panic_atac.jpeg"
-            alt="certificate_panic_atac.jpeg"
-          />
-          <img
-            className={style.dyplom}
-            src="certificate_rhp.jpeg"
-            alt="certificate_rhp.jpeg"
-          />
+          <SliderAbout />
         </div>
       </div>
     </>
