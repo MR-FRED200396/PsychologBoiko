@@ -1,4 +1,20 @@
 .footer_wraper {
   background-color: #ffcccc;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.social_media_icons {
+  padding: 15px;
+  flex-direction: row;
+}
+.allRightProtect_Wraper {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0px;
+}
+.allRightProtect {
+  font-size: 11px;
 }
