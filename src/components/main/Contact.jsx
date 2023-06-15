@@ -1,38 +1,66 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, "Too Short!")
-    .max(70, "Too Long!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
+    .min(2, "занадто коротке імя")
+    .max(20, "занадто довге імя")
+    .required("потрібно заповнити дане поле"),
+  age: Yup.number("тут потрібно вписати число")
+    .required("потрібно заповнити дане поле")
+    .positive("число повинно бути додатнім")
+    .min(18, "працюю лише з повнолітніми")
+    .max(99, "працюю лише з людьми до 100 років")
+    .integer("потрібно вказати повні роки"),
+  instagramNicname: Yup.string()
+    .min(2, "занадто коротке прізвище")
+    .max(20, "занадто довге прізвище")
+    .required("потрібно заповнити дане поле"),
+  description: Yup.string()
+    .required("потрібно заповнити дане поле")
+    .min(20, "занадто короткий опис")
+    .max(650, "занадто довгий опис"),
 });
 export default function Contact() {
   return (
     <>
-      <h1>My Form</h1>
+      <h1>Заповни форму для зворотнього звязку</h1>
       <Formik
         initialValues={{
           name: "",
-          email: "",
+          age: "",
+          instagramNicname: "",
+          description: "",
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          // same shape as initial values
           console.log(values);
         }}
       >
         {({ errors, touched }) => (
           <Form>
-            <Field name="name" />
+            <Field name="name" placeholder="Ім'я" />
             {errors.name && touched.name ? <div>{errors.name}</div> : null}
-            <ErrorMessage name="name" />
-            <Field name="email" type="email" />
-            {errors.email && touched.email ? <div>{errors.email}</div> : null}
-            <ErrorMessage name="email" />
-            <button type="submit">Submit</button>
+
+            <Field name="age" placeholder="вік" />
+            {errors.age && touched.age ? <div>{errors.age}</div> : null}
+
+            <Field name="instagramNicname" placeholder="нікнейм в Instagram" />
+            {errors.instagramNicname && touched.instagramNicname ? (
+              <div>{errors.instagramNicname}</div>
+            ) : null}
+
+            <Field
+              name="description"
+              as="textarea"
+              placeholder="Короткий опис твого запиту"
+            ></Field>
+            {errors.description && touched.description ? (
+              <div>{errors.description}</div>
+            ) : null}
+
+            <button type="submit">Відправити</button>
           </Form>
         )}
       </Formik>
