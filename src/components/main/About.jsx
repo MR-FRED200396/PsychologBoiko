@@ -1,5 +1,5 @@
 import style from "./main.module.css";
-import SliderAbout from "./sliderAbout/SliderAbout";
+import SliderAbout from "../main/aboutComponents/SliderAbout";
 
 export default function About() {
   return (
