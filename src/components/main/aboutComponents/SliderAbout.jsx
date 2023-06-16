@@ -1,4 +1,4 @@
-import style from "./sliderAbout.module.css";
+import style from "./aboutComponents.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
@@ -14,6 +14,7 @@ export default function SliderAbout() {
   };
   return (
     <>
+      <h3 className={style.about_h3}>Диплом і сертифікати</h3>
       <Slider {...settings}>
         <div>
           <img className={style.dyplom} src="dyplom.jpeg" alt="dyplom_img" />
