@@ -1,1 +1,1 @@
-const a = 123454;
+const name = "lorem ipsum";
