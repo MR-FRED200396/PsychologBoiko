@@ -18,7 +18,7 @@ export default function RequestsIWork() {
     backgroundImage: `url(${backgroundImageUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "100vh",
+    minheight: "100vh",
   };
   return (
     <>
