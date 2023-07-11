@@ -1,4 +1,4 @@
-import { Row, Col, Typography, Card, Collapse, Divider } from "antd";
+import { Row, Col, Typography, Collapse, Divider } from "antd";
 import { CheckCircleOutlined } from "@ant-design/icons";
 
 export default function HowItLookConsultacion() {

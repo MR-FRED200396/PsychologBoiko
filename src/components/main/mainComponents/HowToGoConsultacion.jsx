@@ -1,229 +1,25 @@
-// import { Row, Col, Typography, Button, Card } from "antd";
-import { PlusOutlined } from "@ant-design/icons";
-import {
-  Button,
-  Col,
-  DatePicker,
-  Drawer,
-  Form,
-  Input,
-  Row,
-  Select,
-  Space,
-} from "antd";
-import { useState } from "react";
-const { Option } = Select;
+import React, { useState } from "react";
+import { Button, Modal } from "antd";
 
 export default function HowToGoConsultation() {
   const [open, setOpen] = useState(false);
-  const showDrawer = () => {
-    setOpen(true);
-  };
-  const onClose = () => {
-    setOpen(false);
-  };
   return (
     <>
-      <Row>
-        {/* <Col
-          span={24}
-          style={{
-            backgroundColor: "#E5E5DE",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Typography.Title level={2} style={{ color: "#808080" }}>
-            Як потрапити на консультацію?
-          </Typography.Title>
-        </Col>
-        <Col xs={24} sm={12} md={12} lg={12}>
-          <Card>
-            Написати на сайті
-            <Button
-              type="primary"
-              block
-              style={{
-                backgroundColor: "orange",
-                color: "black",
-              }}
-              onClick={() => console.log("Button clicked")}
-            >
-              записатись на консультацію
-            </Button>
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={12} lg={12}>
-          <Card>
-            Написати у соцмережі
-            <Button
-              type="primary"
-              block
-              style={{
-                backgroundColor: "orange",
-                color: "black",
-              }}
-              onClick={() => console.log("Button clicked")}
-            >
-              записатись на консультацію
-            </Button>
-          </Card>
-        </Col> */}
-      </Row>
-
-      <Button type="primary" onClick={showDrawer} icon={<PlusOutlined />}>
-        записатись на консультацію
+      <Button type="primary" onClick={() => setOpen(true)}>
+        Записатись
       </Button>
-      <Drawer
-        title="Create a new account"
-        width={720}
-        onClose={onClose}
+      <Modal
+        title="Modal 1000px width"
+        centered
         open={open}
-        bodyStyle={{
-          paddingBottom: 80,
-        }}
-        extra={
-          <Space>
-            <Button onClick={onClose}>Cancel</Button>
-            <Button onClick={onClose} type="primary">
-              Submit
-            </Button>
-          </Space>
-        }
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+        width={1000}
       >
-        <Form layout="vertical" hideRequiredMark>
-          <Row gutter={16}>
-            <Col span={12}>
-              <Form.Item
-                name="name"
-                label="Name"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter user name",
-                  },
-                ]}
-              >
-                <Input placeholder="Please enter user name" />
-              </Form.Item>
-            </Col>
-            <Col span={12}>
-              <Form.Item
-                name="url"
-                label="Url"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter url",
-                  },
-                ]}
-              >
-                <Input
-                  style={{
-                    width: "100%",
-                  }}
-                  addonBefore="http://"
-                  addonAfter=".com"
-                  placeholder="Please enter url"
-                />
-              </Form.Item>
-            </Col>
-          </Row>
-          <Row gutter={16}>
-            <Col span={12}>
-              <Form.Item
-                name="owner"
-                label="Owner"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please select an owner",
-                  },
-                ]}
-              >
-                <Select placeholder="Please select an owner">
-                  <Option value="xiao">Xiaoxiao Fu</Option>
-                  <Option value="mao">Maomao Zhou</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={12}>
-              <Form.Item
-                name="type"
-                label="Type"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please choose the type",
-                  },
-                ]}
-              >
-                <Select placeholder="Please choose the type">
-                  <Option value="private">Private</Option>
-                  <Option value="public">Public</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-          </Row>
-          <Row gutter={16}>
-            <Col span={12}>
-              <Form.Item
-                name="approver"
-                label="Approver"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please choose the approver",
-                  },
-                ]}
-              >
-                <Select placeholder="Please choose the approver">
-                  <Option value="jack">Jack Ma</Option>
-                  <Option value="tom">Tom Liu</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={12}>
-              <Form.Item
-                name="dateTime"
-                label="DateTime"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please choose the dateTime",
-                  },
-                ]}
-              >
-                <DatePicker.RangePicker
-                  style={{
-                    width: "100%",
-                  }}
-                  getPopupContainer={(trigger) => trigger.parentElement}
-                />
-              </Form.Item>
-            </Col>
-          </Row>
-          <Row gutter={16}>
-            <Col span={24}>
-              <Form.Item
-                name="description"
-                label="Description"
-                rules={[
-                  {
-                    required: true,
-                    message: "please enter url description",
-                  },
-                ]}
-              >
-                <Input.TextArea
-                  rows={4}
-                  placeholder="please enter url description"
-                />
-              </Form.Item>
-            </Col>
-          </Row>
-        </Form>
-      </Drawer>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </Modal>
     </>
   );
 }
