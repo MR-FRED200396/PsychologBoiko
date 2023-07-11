@@ -1,4 +1,4 @@
-import { Row, Col, Typography, Card } from "antd";
+import { Row, Col, Typography, Card, Divider } from "antd";
 const { Meta } = Card;
 
 export default function RequestsIWork() {
@@ -93,15 +93,10 @@ export default function RequestsIWork() {
   return (
     <>
       <Row>
-        <Col
-          span={24}
-          style={{
-            backgroundColor: "#999",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Typography.Title level={2}>Запити з якими працюю </Typography.Title>
+        <Col span={24}>
+          <Divider orientation="center" style={{ backgroundColor: "#999" }}>
+            <Typography.Title level={2}>Запити з якими працюю</Typography.Title>
+          </Divider>
         </Col>
       </Row>
 
