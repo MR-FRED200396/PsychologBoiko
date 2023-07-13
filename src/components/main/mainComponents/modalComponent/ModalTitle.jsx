@@ -1,22 +1,44 @@
 import React from "react";
-import { Typography } from "antd";
+import { Col, Typography } from "antd";
+import { ClockCircleOutlined, VideoCameraOutlined } from "@ant-design/icons";
 
 const ModalTitle = () => {
   return (
-    <div
-      style={{
-        height: "420px",
-        backgroundColor: "#f0f0f0",
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "start",
-        alignItems: "start",
-      }}
-    >
-      <h3>Заголовок опису</h3>
-      <p>Тут буде опис вашого елемента.</p>
-    </div>
+    <Col span={8}>
+      <div
+        style={{
+          height: "420px",
+          width: "100%",
+          padding: "20px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "start",
+          alignItems: "center",
+        }}
+      >
+        <Typography.Text style={{ width: "8em", textAlign: "center" }}>
+          Ірина Бойко
+        </Typography.Text>
+        <Typography.Title
+          level={3}
+          style={{
+            width: "5em",
+            textAlign: "center",
+            marginTop: "1em",
+            marginBottom: "1em",
+          }}
+        >
+          Зустріч
+        </Typography.Title>
+        <Typography.Text style={{ width: "8em", textAlign: "center" }}>
+          <ClockCircleOutlined /> 50 хв
+        </Typography.Text>
+        <Typography.Text style={{ width: "8em", textAlign: "center" }}>
+          <VideoCameraOutlined /> Деталі веб-конференції надаються після
+          реєстрації
+        </Typography.Text>
+      </div>
+    </Col>
   );
 };
 
