@@ -8,16 +8,15 @@ const ModalComponent = ({ open, handleClose }) => {
   const token = {
     colorBorderSecondary: "#000000",
     borderRadiusLG: "5px",
-    // Other token properties
   };
 
   return (
     <Modal
       centered
       visible={open}
-      onOk={handleClose}
+      footer={null}
       onCancel={handleClose}
-      width={1000}
+      width={900}
     >
       <Row gutter={24}>
         <Col span={8}>

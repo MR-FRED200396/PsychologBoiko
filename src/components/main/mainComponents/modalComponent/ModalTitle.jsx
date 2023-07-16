@@ -30,7 +30,9 @@ const ModalTitle = () => {
         >
           Зустріч
         </Typography.Title>
-        <Typography.Text style={{ width: "8em", textAlign: "center" }}>
+        <Typography.Text
+          style={{ width: "8em", textAlign: "center", padding: "10px" }}
+        >
           <ClockCircleOutlined /> 50 хв
         </Typography.Text>
         <Typography.Text style={{ width: "8em", textAlign: "center" }}>
