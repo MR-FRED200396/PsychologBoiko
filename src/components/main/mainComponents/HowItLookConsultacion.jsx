@@ -7,16 +7,14 @@ export default function HowItLookConsultacion() {
       <Row>
         <Col span={24}>
           <Divider orientation="center" style={{ backgroundColor: "#999" }}>
-            <Typography.Title level={2}>
-              Як виглядає консультація?
-            </Typography.Title>
+            <Typography.Title level={2}>Часті запитання</Typography.Title>
           </Divider>
           <Collapse
             size="large"
             items={[
               {
                 key: "1",
-                label: "Як все відбувається",
+                label: "Як все відбувається ?",
                 children: (
                   <p>
                     <CheckCircleOutlined />
@@ -33,7 +31,7 @@ export default function HowItLookConsultacion() {
             items={[
               {
                 key: "1",
-                label: "Скільки потрібно зустрічей",
+                label: "Скільки потрібно зустрічей ?",
                 children: (
                   <p>
                     <CheckCircleOutlined />
@@ -50,7 +48,7 @@ export default function HowItLookConsultacion() {
             items={[
               {
                 key: "1",
-                label: "Яка вартість",
+                label: "Яка вартість ?",
                 children: (
                   <p>
                     <CheckCircleOutlined />

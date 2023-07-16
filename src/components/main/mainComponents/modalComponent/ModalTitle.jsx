@@ -35,11 +35,11 @@ const ModalTitle = () => {
         <Typography.Text
           style={{ width: "8em", textAlign: "center", padding: "10px" }}
         >
-          <ClockCircleOutlined /> 50 хв
+          <ClockCircleOutlined /> Тривальсть : 50 хв
         </Typography.Text>
         <Typography.Text style={{ width: "8em", textAlign: "center" }}>
-          <VideoCameraOutlined /> Деталі веб-конференції надаються після
-          реєстрації
+          <VideoCameraOutlined /> Формат відео зустрічі: Zoom, Skype, Viber,
+          Telegram.
         </Typography.Text>
       </div>
     </Col>

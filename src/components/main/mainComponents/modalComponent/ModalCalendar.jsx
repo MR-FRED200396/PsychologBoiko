@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
 import dayLocaleData from "dayjs/plugin/localeData";
@@ -6,6 +6,8 @@ import { Calendar, Select, Typography, Row, Col } from "antd";
 dayjs.extend(dayLocaleData);
 
 const ModalCalendar = ({ token }) => {
+  const [selectedDate, setSelectedDate] = useState(null);
+
   const onPanelChange = (value, mode) => {
     console.log(value.format("YYYY-MM-DD"), mode);
   };
@@ -14,12 +16,16 @@ const ModalCalendar = ({ token }) => {
     return current && current < dayjs().startOf("day");
   };
 
+  const handleSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   const wrapperStyle = {
     width: 300,
+    height: 347,
     border: `1px solid ${token.colorBorderSecondary}`,
     borderRadius: token.borderRadiusLG,
     overflowY: "auto",
-    maxHeight: "420px",
   };
 
   return (
@@ -70,14 +76,19 @@ const ModalCalendar = ({ token }) => {
               return (
                 <div
                   style={{
-                    padding: 8,
+                    paddingLeft: 8,
                   }}
                 >
-                  <Typography.Title level={5}>Виберить дату</Typography.Title>
-                  <Row gutter={8}></Row>
+                  <Typography.Title level={5}>Виберіть дату</Typography.Title>
+                  <Row gutter={8}>
+                    <Typography.Text>
+                      {selectedDate ? selectedDate.format("YYYY-MM-DD") : ""}
+                    </Typography.Text>
+                  </Row>
                 </div>
               );
             }}
+            onSelect={handleSelect}
             onPanelChange={onPanelChange}
           />
         </div>

@@ -22,23 +22,27 @@ const ModalTime = () => {
   };
 
   const containerStyle = {
-    maxHeight: "325px",
+    maxHeight: "300px",
     overflowY: "scroll",
   };
 
   return (
-    <Col span={24}>
+    <Col
+      span={24}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
       <Typography.Title level={5}>Виберить час</Typography.Title>
       <div style={containerStyle}>
         {timeOptions.map((time, index) => (
           <div
             key={time}
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               margin: "10px",
-              height: "100%",
             }}
           >
             {selectedTime === time && showNextButton ? (

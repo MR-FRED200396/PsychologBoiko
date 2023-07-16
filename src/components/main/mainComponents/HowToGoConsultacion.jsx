@@ -40,7 +40,7 @@ export default function HowToGoConsultation() {
             }}
             shape="round"
           >
-            Записатись <ArrowRightOutlined />
+            Записатися <ArrowRightOutlined />
           </Button>
           <ModalComponent open={open} handleClose={handleClose} />
         </Col>

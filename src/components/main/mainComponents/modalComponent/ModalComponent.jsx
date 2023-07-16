@@ -19,16 +19,16 @@ const ModalComponent = ({ open, handleClose }) => {
       width={900}
     >
       <Row gutter={24}>
-        <Col xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
+        <Col xs={24} sm={24} md={6} lg={8} xl={8} xxl={8}>
           <ModalTitle />
         </Col>
-        <Col xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
+        <Col xs={24} sm={12} md={9} lg={8} xl={8} xxl={8}>
           <ModalCalendar token={token} />
         </Col>
         <Col
           xs={24}
-          sm={24}
-          md={8}
+          sm={12}
+          md={9}
           lg={8}
           xl={8}
           xxl={8}
