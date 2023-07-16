@@ -10,32 +10,35 @@ const ModalCalendar = ({ token }) => {
     console.log(value.format("YYYY-MM-DD"), mode);
   };
 
+  const disabledDate = (current) => {
+    return current && current < dayjs().startOf("day");
+  };
+
   const wrapperStyle = {
     width: 300,
     border: `1px solid ${token.colorBorderSecondary}`,
     borderRadius: token.borderRadiusLG,
+    overflowY: "auto",
+    maxHeight: "420px",
   };
 
   return (
-    <Col
-      span={8}
-      style={{
-        height: "420px",
-        padding: "20px",
-      }}
-    >
+    <Col span={24}>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "start",
-          alignItems: "start",
+          justifyContent: "center",
+          alignItems: "center",
           height: "100%",
+          minWidth: "260px",
+          paddingBottom: "12px",
         }}
       >
         <div style={wrapperStyle}>
           <Calendar
             fullscreen={false}
+            disabledDate={disabledDate}
             headerRender={({ value, type, onChange, onTypeChange }) => {
               const start = 0;
               const end = 12;
@@ -70,9 +73,7 @@ const ModalCalendar = ({ token }) => {
                     padding: 8,
                   }}
                 >
-                  <Typography.Title level={4}>
-                    Вибрати дату та час
-                  </Typography.Title>
+                  <Typography.Title level={5}>Виберить дату</Typography.Title>
                   <Row gutter={8}></Row>
                 </div>
               );

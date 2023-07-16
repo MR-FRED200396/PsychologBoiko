@@ -6,7 +6,7 @@ import ModalTime from "./ModalTime";
 
 const ModalComponent = ({ open, handleClose }) => {
   const token = {
-    colorBorderSecondary: "#000000",
+    colorBorderSecondary: "#FFCCCC",
     borderRadiusLG: "5px",
   };
 
@@ -19,13 +19,21 @@ const ModalComponent = ({ open, handleClose }) => {
       width={900}
     >
       <Row gutter={24}>
-        <Col span={8}>
+        <Col xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
           <ModalTitle />
         </Col>
-        <Col span={8}>
+        <Col xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
           <ModalCalendar token={token} />
         </Col>
-        <Col span={8}>
+        <Col
+          xs={24}
+          sm={24}
+          md={8}
+          lg={8}
+          xl={8}
+          xxl={8}
+          style={{ marginTop: "-20px" }}
+        >
           <ModalTime />
         </Col>
       </Row>
